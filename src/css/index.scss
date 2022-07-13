@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Mono:ital,wght@1,100&family=Source+Code+Pro:wght@500&display=swap');
+
+$bg-color-master: rgb(18,18,19);
+$bg-color-about: rgb(16, 16, 17);
+$bg-color-modal: rgb(25,25,25);
+$bg-color-cell-default: rgb(32, 32, 32);
+$bg-color-cell-yellow: rgb(181,159,59);
+$bg-color-cell-green: rgb(83,141,78);
+
+body {
+    margin: 0;
+    background-color: $bg-color-master;
+    font-family: 'Source Code Pro';
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.header {
+  color: white;
+
+  .top-bar {
+    background-color: $bg-color-about;
+    padding: 2em;
+    margin-bottom: 3em;
+  }
+}
+  
+code {
+  font-family: 'Source Code Pro'
+}
+
+.search-input {
+  background-color: white;
+  text-align: left;
+  max-width: 350px;
+  border-radius: .5em;
+  margin: auto;
+  margin-bottom: .9em;
+
+  input {
+    font-family: 'Source Code Pro';
+    background-color: white;
+    border: none;
+    padding: 1em;
+    margin-left: 1em;
+    width: 18.5em;
+    height: 2em;
+    font-size: 14px;
+    outline: none;
+  }
+
+  .clear-button {
+    border: none;
+
+    .clear-icon {
+      margin-bottom: -.25em;
+    }
+  }
+}
+
+
+.guess-button {
+  margin-top: .4em;
+}
+
+.MuiButton-label {
+  font-family: 'Source Code Pro'
+}
+
+
+.guess-button-hidden {
+  visibility: hidden;
+  user-select: none;
+  margin-bottom: 80px;
+}
+
+.search-container {
+  display: flex;
+  position: absolute;
+  margin-left: 50%;
+  transform: translate(-175px, 0);
+
+  .suggestions-full {
+    text-align: left;
+    width: 21.85em;
+    height: 9.8em;
+    border-radius: .5em;
+    background-color: rgb(255, 255, 255);
+    overflow: hidden;
+    overflow-y: auto;
+  
+  }
+  
+  .suggestions-medium {
+    text-align: left;
+    width: 21.85em;
+    height: 6.533em;
+    border-radius: .5em;
+    background-color: white;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+  
+  .suggestions-short {
+    text-align: left;
+    width: 21.85em;
+    height: 3.267em;
+    border-radius: .5em;
+    background-color: white;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+  
+  .suggestions-item {
+    display: flex;
+    align-items: center;
+    color: rgb(0, 0, 0);
+  
+    .player-name {
+      padding-left: 1.75em;
+    }
+  }
+  
+  .suggestions-item:hover {
+    background-color: rgb(219, 245, 253);
+    border-left-style: solid;
+    border-left-width: 5px;
+    border-color: rgb(83, 182, 212);
+    cursor: pointer;
+  }
+}
+
+.mystery-image {
+
+  .dark-image-revealed {
+    display: none;
+  }
+  
+  .dark-image-unrevealed {
+    height: 200px;
+    filter: brightness(0%) invert(100%);
+    -webkit-user-drag: none;
+  }
+
+  .stock-image-unrevealed {
+    height: 200px;
+    -webkit-user-drag: none;
+  }
+  
+  .stock-image-revealed {
+    display: none;
+  }
+
+ .reveal-text-container {
+  padding-top: .3em;
+  padding-bottom: 2em;
+
+  .reveal-text {
+    max-width: 150px;
+    margin: auto;
+
+    .click-reveal {
+      text-decoration: underline;
+      margin: 0;
+      color: white;
+      cursor: pointer;
+    }
+  }
+ }
+}
+
+.about-footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  max-height: 120px;
+  padding-top: 3.5em;
+  padding-bottom: 1.5em;
+  background-color: $bg-color-about;
+
+  .author a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .twitter-link {
+    text-decoration: underline;
+  }
+
+  .author p {
+    padding-top: 4em;
+    font-size: 12px;
+    color: white;
+  }
+}
+
+.modal, .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background: $bg-color-modal;
+  padding: 2em;
+  border-radius: .5em;
+  max-width: 600px;
+  min-width: 300px;
+  color:rgb(255, 255, 255);
+
+  .player-revealed {
+    
+    .image-revealed {
+      max-height: 140px;
+      padding-bottom: 2em;
+    }
+  }
+  
+  .modal-player-name{
+    padding-bottom: 2em;
+
+    a {
+      color:rgb(255, 255, 255);
+    }
+  }
+
+  .run-it-back {
+    margin-bottom: 1em;
+  }
+}
+
+.table-container {
+  color: white;
+  display: flex;
+  margin-top: 5em;
+  justify-content: center;
+
+  img {
+    max-height: 30px;
+  }
+
+  table {
+    max-width: 300px;
+    text-align: center;
+  }
+
+  th, td {
+    padding: 15px;
+    border-radius: .25em;
+    background-color: $bg-color-cell-default;
+  }
+
+  .td-yellow {
+    background-color: $bg-color-cell-yellow;
+  }
+
+  .td-green {
+    background-color: $bg-color-cell-green;
+  }
+
+}
+
+.overlay {
+  background: rgba($color: $bg-color-master , $alpha: 0.8);
+}
+
+.team-container {
+  margin-bottom: 15em;
+
+  p {
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  .show-team-table {
+    margin-bottom: -em;
+  }
+
+  .hide-team-table {
+    display: none;
+  }
+
+}
+
+.team-table-container {
+  display: flex;
+  justify-content: center;
+  color: white;
+  table {
+    max-width: 300px;
+    text-align: center;
+  }
+
+  th, td {
+    padding: 15px;
+    border-radius: .25em;
+    background-color: $bg-color-cell-default;
+  }
+}
+
+.void {
+  margin-bottom: 25em;
+}
+
+.suggestions-full::-webkit-scrollbar {
+  display: none;
+}
