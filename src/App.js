@@ -49,8 +49,6 @@ const App = () => {
   const [silhouetteRevealed, setSilhouetteRevealed] = useState(false);
   const [winStreak, setWinStreak] = useState(0);
 
-  console.log(currentPlayer.full_name)
-
   useEffect(() => {
     setInputValue([]);
     playerJSONFull.forEach(player => {

@@ -11,15 +11,12 @@ const Guess = ({ data, stateObject }) => {
 
         if (playerExists) {
             if (inputValue === currentPlayer.full_name) {
-                console.log('correct');
                 setGameStatus('WIN');
                 setWinStreak(winStreak+1);
 
             } else {
-                console.log('wrong: attempt:', attemptCount);
                 setAttemptCount(attemptCount + 1)
                 if (attemptCount === 8) {
-                    console.log('finished');
                     setGameStatus('LOSE');
                     setWinStreak(0);
                 }
