@@ -35,7 +35,7 @@ const Search = ({data, stateObject}) => {
 
             <div className='search-container'>
                 {filteredData != 0 && (
-                <div className={filteredData.length == 1 ? 'suggestions-short' : (filteredData.length == 2 ? 'suggestions-medium' : 'suggestions-full')}>
+                <div className={filteredData.length === 1 ? 'suggestions-short' : (filteredData.length === 2 ? 'suggestions-medium' : 'suggestions-full')}>
                     {filteredData.slice(0,15).map((value, idx) => {
                         return <a onClick={() => {
                             setInputValue(value.full_name);
