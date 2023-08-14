@@ -1,5 +1,4 @@
 # LeGuess
 
-NBA Player Guessing Game
-
+wordle for nba players
 https://leguess.herokuapp.com/
