@@ -1,4 +1,4 @@
 # LeGuess
 
 wordle for nba players
-https://leguess.herokuapp.com/
+~~https://leguess.herokuapp.com/~~
